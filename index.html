@@ -6,6 +6,8 @@
     <title>LifeFlow - Donate Blood, Save Lives</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   
+
 </head>
 <body>
 
@@ -17,10 +19,22 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#" class="active">Home</a></li>
-                <li><li><a href="find-donor.html">Find Donors</a></li></li>
-                <li><a href="#">Emergency</a></li>
+                <li><a href="find-donor.html">Find Donors</a></li>
+            
                 <li><a href="login.html">Login</a></li>
                 <li><a href="register.html" class="btn-register-nav">Register</a></li>
+                <div class="profile-menu">
+
+<div class="profile-icon" onclick="toggleMenu()">
+<i class="fa fa-user-circle"></i>
+</div>
+
+<div class="dropdown-menu" id="dropdownMenu">
+<a href="profile.html">My Profile</a>
+<a href="#" onclick="logout()">Logout</a>
+</div>
+
+</div>
             </ul>
         </nav>
     </header>
@@ -139,5 +153,27 @@
         </div>
     </footer>
 
+    <script>
+
+function toggleMenu(){
+
+let menu=document.getElementById("dropdownMenu");
+
+if(menu.style.display==="block"){
+menu.style.display="none";
+}else{
+menu.style.display="block";
+}
+
+}
+
+function logout(){
+
+localStorage.removeItem("loggedUser");
+window.location.href="login.html";
+
+}
+
+</script>
 </body>
 </html>
