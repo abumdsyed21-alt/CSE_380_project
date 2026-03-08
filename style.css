@@ -249,3 +249,36 @@ hr { border: 0; border-top: 1px solid #2d3748; margin-bottom: 30px; }
     margin-left: auto;
     margin-right: auto;
 }
+
+.profile-menu{
+position:relative;
+display:inline-block;
+margin-left:20px;
+}
+
+.profile-icon{
+font-size:28px;
+cursor:pointer;
+color:#333;
+}
+
+.dropdown-menu{
+display:none;
+position:absolute;
+right:0;
+background:white;
+min-width:150px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+border-radius:6px;
+}
+
+.dropdown-menu a{
+display:block;
+padding:10px;
+text-decoration:none;
+color:#333;
+}
+
+.dropdown-menu a:hover{
+background:#f2f2f2;
+}
